@@ -117,7 +117,7 @@ if(FLATBUFFERS_FOUND)
       set(ABSOLUTE_FBS_FILE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/${FLATBUFFERS_DIR}/${FILE})
 
       add_custom_command(OUTPUT ${FLATC_OUTPUT}
-        COMMAND ${FLATBUFFERS_FLATC_EXECUTABLE}
+        COMMAND flatc
         # Note: We are setting several custom parameters here to make life easier.
         # see flatbuffers documentation for details.
         # flatc --gen-name-strings --scoped-enums --gen-object-api -c -j -p -o
